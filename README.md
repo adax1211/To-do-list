@@ -19,7 +19,7 @@ You can add, remove, mark tasks as completed, and hide completed tasks. All of t
 
 ## Demo 🚀
 
-Check out the live version of the application here: [https://github.com/adax1211/To-do-list](#)
+[![Visit Demo](https://img.shields.io/badge/Visit-Demo-blue?style=for-the-badge&logo=github)](https://github.com/adax1211/To-do-list)
 
 ---
 
