@@ -1,0 +1,45 @@
+.todoForm {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .todoForm {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
+.todoForm__button {
+    padding: 10px;
+    background-color: teal;
+    color: #fff;
+    border: none;
+    transition: 0.5s;
+}
+
+.todoForm__button:hover {
+    background-color: hsl(180, 100%, 30%);
+    transform: scale(1.1);
+}
+
+.todoForm__button:active {
+    background-color: hsl(180, 100%, 35%);
+}
+
+.todoForm__newItem {
+    border: 2px solid #ddd;
+    padding: 10px;
+}
+
+.todoForm__newItem:focus {
+    outline: 2px solid black;
+    border-radius: 2px;
+}
+
+@media (max-width: 767px) {
+    .todoForm__newItem {
+        min-width: 50%;
+    }
+}

@@ -1,0 +1,24 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+.todoContainer {
+    background-color: #F0F0F0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    padding: 20px;
+    word-break: break-word;
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+
+@media (max-width: 767px) {
+    .todoContainer {
+        padding: 15px;
+    }
+}
