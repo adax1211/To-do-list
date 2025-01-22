@@ -45,6 +45,7 @@
     border: none;
     color: teal;
     margin-left: 10px;
+    transition: color 0.3s ease-in-out;
 }
 
 @media (max-width: 767px) {
@@ -68,4 +69,5 @@
 
 .todoSection__buttons:disabled {
     color: #bfbfbf;
+    cursor: not-allowed;
 }
