@@ -1,10 +1,7 @@
 {
   let hideCompletedTask = false;
 
-  let tasks = [
-    { content: "zakupy", completed: false },
-    { content: "obiad", completed: true },
-  ];
+  let tasks = [];
 
   const addNewItem = (newItemContent) => {
     tasks = [...tasks, { content: newItemContent, completed: false }];
@@ -18,9 +15,7 @@
 
   const toggleTaskCompleted = (taskIndex) => {
     tasks = tasks.map((task, i) =>
-      i === taskIndex
-        ? { ...task, completed: !task.completed }
-        : task
+      i === taskIndex ? { ...task, completed: !task.completed } : task
     );
     render();
   };
@@ -52,9 +47,10 @@
       ? tasks.filter((task) => !task.completed)
       : tasks;
 
-    taskListElement.innerHTML = filteredTasks
-      .map(
-        (task) => `
+    taskListElement.innerHTML = filteredTasks.length
+      ? filteredTasks
+          .map(
+            (task) => `
           <li class="todoTasks__item ${
             task.completed ? "todoTasks__item--toggleCompleted" : ""
           }">
@@ -65,8 +61,9 @@
               <button class="js-remove todoTasks__button todoTasks__button--deleted" aria-label="Usuń zadanie">🗑</button>
           </li>
       `
-      )
-      .join("");
+          )
+          .join("")
+      : "<p class='emptyMessage'>Brak zadań do wyświetlenia.</p>";
   };
 
   const renderButtons = () => {
