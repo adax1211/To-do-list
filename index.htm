@@ -19,33 +19,32 @@
     <script defer src="script.js"></script>
 </head>
 
-<body>
 
-    <body class="todoContainer">
-        <header>
-            <h1 class="todoTitle">Lista zadań</h1>
+   <body class="todoContainer">
+    <header>
+        <h1 class="todoTitle">Lista zadań</h1>
+    </header>
+    <section class="todoSection">
+        <header class="todoSection__header">
+            <h2 class="todoSection__title">Dodaj nowe zadanie</h2>
         </header>
-        <section class="todoSection">
-            <header class="todoSection__header">
-                <h2 class="todoSection__title">Dodaj nowe zadanie</h2>
-            </header>
-            <div class="todoSection__container">
-                <form class="todoForm js-form">
-                    <input class="todoForm__newItem js-newItem" type="text" placeholder="Co jest do zrobienia?"
-                        autofocus>
-                    <button class="todoForm__button">Dodaj zadanie</button>
-                </form>
-            </div>
-        </section>
-        <section class="todoSection">
-            <header class="todoSection__header">
-                <h2 class="todoSection__title">Lista zadań</h2>
-                <div class="todoSection__buttonsContainer js-buttons"></div>
-            </header>
-            <div class="todoSection__container">
-                <ul class="todoTasks js-tasks"></ul>
-            </div>
-        </section>
-    </body>
+        <div class="todoSection__container">
+            <form class="todoForm js-form">
+                <input class="todoForm__newItem js-newItem" type="text" placeholder="Co jest do zrobienia?" autofocus>
+                <button class="todoForm__button">Dodaj zadanie</button>
+            </form>
+        </div>
+    </section>
+    <section class="todoSection">
+        <header class="todoSection__header">
+            <h2 class="todoSection__title">Lista zadań</h2>
+            <div class="todoSection__buttonsContainer js-buttons"></div>
+        </header>
+        <div class="todoSection__container">
+            <ul class="todoTasks js-tasks"></ul>
+        </div>
+    </section>
+</body>
+
 
 </html>
