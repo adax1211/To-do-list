@@ -11,17 +11,23 @@
     border-bottom: 2px solid #ddd;
     padding: 10px;
     gap: 10px;
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.todoTasks__item:hover {
+    transform: translateX(5px);
 }
 
 .todoTasks__items--hidden {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .todoTasks__item--toggleCompleted span {
     text-decoration: line-through;
     color: gray;
 }
-
 
 .todoTasks__button {
     display: flex;
@@ -32,13 +38,16 @@
     border: none;
     width: 30px;
     height: 30px;
-    padding: 0px;
+    padding: 0;
     margin: 0;
-    transition: background 0.4s;
+    transition: background 0.4s, transform 0.2s;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .todoTasks__button:hover {
     background-color: hsl(120, 100%, 30%);
+    transform: scale(1.1);
 }
 
 .todoTasks__button:active {
@@ -46,7 +55,7 @@
 }
 
 .todoTasks__button--deleted {
-    background-color: rgb(250, 48, 48)
+    background-color: hsl(0, 100%, 50%);
 }
 
 .todoTasks__button--deleted:hover {
@@ -55,4 +64,31 @@
 
 .todoTasks__button--deleted:active {
     background-color: hsl(0, 100%, 75%);
+}
+
+.todoTasks__text {
+    font-size: 18px;
+    color: #333;
+    word-break: break-word;
+}
+
+.todoTasks__text--completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+@media (max-width: 767px) {
+    .todoTasks__item {
+        grid-template-columns: 1fr auto;
+        gap: 5px;
+    }
+
+    .todoTasks__button {
+        width: 25px;
+        height: 25px;
+    }
+
+    .todoTasks__text {
+        font-size: 16px;
+    }
 }
